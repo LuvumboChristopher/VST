@@ -8,13 +8,14 @@ import StoreHeader from './components/StoreHeader'
 const Store = () => {
   const [searchTerm, setSerchTerm] = useState('')
 
+  /* 
   const search = (data) => {
     const keys = ['title', 'author', 'description']
     return Object.values(data).filter((item) =>
       keys.some((key) => item[key].toLowerCase().includes(searchTerm))
     )
-  }
-
+  }*/
+  
   return (
     <StoreContainer>
       <StoreHeader />
