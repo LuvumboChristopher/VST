@@ -1,10 +1,7 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
-
 import { NavContainer, NavLink, NavIcon, NavTitle } from '../../style'
 
 const Navbar = () => {
-  const navigate = useNavigate()
   return (
       <NavContainer>
         <NavLink>
@@ -13,7 +10,6 @@ const Navbar = () => {
           ></NavIcon>
           <NavTitle>Accueil</NavTitle>
         </NavLink>
-
         <NavLink>
           <NavIcon
             href='#umdp'
@@ -30,7 +26,7 @@ const Navbar = () => {
 
         <NavLink>
           <NavIcon
-            onClick={() => navigate('/store')}
+            
           ></NavIcon>
           <NavTitle>Store</NavTitle>
         </NavLink>

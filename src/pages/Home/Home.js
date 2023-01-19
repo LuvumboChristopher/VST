@@ -1,10 +1,6 @@
 import React from 'react'
-
-
 import Navbar from './components/Navbar/Navbar'
 import ResponsiveMenu from './components/Navbar/ResponsiveMenu'
-
-
 import Accueil from './screens/Accueil/Accueil'
 import Umdp from './screens/Umdp/Umdp'
 import Services from './screens/Services/Services'

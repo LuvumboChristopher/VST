@@ -73,11 +73,9 @@ textarea::-webkit-scrollbar-thumb:hover {
   background-color: #b1b1b1;
 } 
 
-
 section {
   scroll-snap-align: start;
 }
-
 
 @media(max-width: 821px) {
     html {

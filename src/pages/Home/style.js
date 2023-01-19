@@ -110,7 +110,7 @@ export const ResponsiveNavbar = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.1s linear;
+    transition: all 0.5s linear;
   }
 `
 
