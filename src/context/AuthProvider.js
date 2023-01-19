@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
 
   const checkUser = async () => {
     const { data } = await Axios.get(
-      'http://localhost:5000/api/v1/auth/protected',
+      '/api/v1/auth/protected',
       {
         withCredentials: true,
       }
