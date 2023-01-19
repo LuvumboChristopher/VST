@@ -45,7 +45,7 @@ export default function OrderScreen() {
       try {
         dispatch({ type: 'FETCH_REQUEST' });
         const { data } = await axios.get(
-          `http://localhost:5000/api/v1/orders/${orderId}`,
+          `/api/v1/orders/${orderId}`,
           {
             withCredentials: true,
           }

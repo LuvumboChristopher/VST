@@ -2,7 +2,7 @@
   "name": "vinylstore",
   "version": "0.1.0",
   "homepage": "./",
-  "proxy": "http://localhost:5000/",
+  "proxy": "https://vst-server.vercel.app",
   "secure": false,
   "private": true,
   "dependencies": {
