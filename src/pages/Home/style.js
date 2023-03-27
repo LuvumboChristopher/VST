@@ -700,6 +700,10 @@ export const LoremText = styled.p`
   margin: auto;
   font-size: 0.8rem;
   text-align: justify;
+  text-transform: lowercase;
+  &:first-letter {
+      text-transform: uppercase;
+    }
 `
 export const NewsletterInput = styled.input`
   width: 100%;
