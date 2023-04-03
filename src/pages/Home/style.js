@@ -87,7 +87,7 @@ export const NavTitle = styled.p`
   display: none;
   font-size: 0.93rem;
   color: rgb(255, 255, 255);
-  filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 0 0.75rem black);
   ${NavLink}:hover & {
     display: block;
   }
