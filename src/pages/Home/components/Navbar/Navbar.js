@@ -26,7 +26,7 @@ const Navbar = () => {
 
         <NavLink>
           <NavIcon
-            
+            href='/vinylstorelyonshop.vercel.app'
           ></NavIcon>
           <NavTitle>Store</NavTitle>
         </NavLink>
