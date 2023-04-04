@@ -41,56 +41,59 @@ const ResponsiveMenu = () => {
       <ResponsiveNavbarContent ref={ref} showNavbarMenu={showNavbarMenu}>
         <IoCloseSharp
           style={{
-            color: 'white',
-            fontSize: '2.3rem',
-            cursor: 'pointer',
-            margin: '0',
+            color: "white",
+            fontSize: "2.3rem",
+            cursor: "pointer",
+            margin: "0",
           }}
           onClick={HandleMenu}
         />
         <div
           style={{
-            width: '100%',
-            height: '100%',
-            margin: 'auto',
+            width: "100%",
+            height: "100%",
+            margin: "auto",
           }}
         >
           <ul
             style={{
-              margin: '5rem auto',
-              color: 'white',
-              fontSize: '1rem',
-              textTransform: 'uppercase',
-              letterSpacing: '10px',
-              cursor: 'pointer',
-              listStyle: 'none',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '10px'
+              margin: "5rem auto",
+              color: "white",
+              fontSize: "1rem",
+              textTransform: "uppercase",
+              letterSpacing: "10px",
+              cursor: "pointer",
+              listStyle: "none",
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
             }}
           >
             <li>
-              <a href='/#accueil' onClick={() => setShowNavbarMenu(false)}>
+              <a href="/#accueil" onClick={() => setShowNavbarMenu(false)}>
                 Accueil
               </a>
             </li>
             <li>
-              <a href='/#umdp' onClick={() => setShowNavbarMenu(false)}>
+              <a href="/#umdp" onClick={() => setShowNavbarMenu(false)}>
                 UMDP
               </a>
             </li>
             <li>
-              <a href='/#services' onClick={() => setShowNavbarMenu(false)}>
+              <a href="/#services" onClick={() => setShowNavbarMenu(false)}>
                 Services
               </a>
             </li>
             <li>
-              <a href='/vinylstorelyonshop.vercel.app' onClick={() => setShowNavbarMenu(false)}>
+              <a
+                href="https://vinylstorelyonshop.vercel.app/"
+                onClick={() => setShowNavbarMenu(false)}
+              >
                 Store
               </a>
             </li>
             <li>
-              <a href='/#contact' onClick={() => setShowNavbarMenu(false)}>
+              <a href="/#contact" onClick={() => setShowNavbarMenu(false)}>
                 Contact
               </a>
             </li>
@@ -101,7 +104,7 @@ const ResponsiveMenu = () => {
         <ResponsiveNavbar navbarTransparency={navbarTransparency}>
           {!navbarTransparency && (
             <ResponsiveNavContainer>
-              <HeaderImage src={VsLogoBlack} className='vs_logo_black' />
+              <HeaderImage src={VsLogoBlack} className="vs_logo_black" />
               <MenuIcon
                 onClick={HandleMenu}
                 navbarTransparency={navbarTransparency}
@@ -111,7 +114,7 @@ const ResponsiveMenu = () => {
         </ResponsiveNavbar>
       )}
     </>
-  )
+  );
 }
 
 export default ResponsiveMenu
