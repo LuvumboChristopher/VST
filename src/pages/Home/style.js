@@ -115,7 +115,7 @@ export const ResponsiveNavbar = styled.div`
 `
 
 export const ResponsiveNavContainer = styled.div`
-  width: 90%;
+  width: 95%;
   margin: 1.5rem auto;
   display: flex;
   justify-content: space-between;
@@ -124,19 +124,15 @@ export const ResponsiveNavContainer = styled.div`
 
 
 export const HeaderImage = styled.img`
-  width: 128px;
+  width: 140px;
   margin: 0;
   transition: all 0.1s linear;
 `
 export const MenuIcon = styled(MenuAlt1)`
-  width: 1.85rem;
+  width: 2.5rem;
   margin: 0;
   color: ${(props) => (props.navbarTransparency ? 'white' : 'black')};
   cursor: pointer;
-  transition: all 0.2s linear;
-  &:hover {
-    transform: scale(1.2);
-  }
 `
 export const ResponsiveNavbarContent = styled.div`
   display: none;
@@ -179,7 +175,7 @@ export const AccueilSection = styled.div`
 `
 export const VsLogo = styled.img`
   display: block;
-  width: clamp(180px, 17%, 500px);
+  width: clamp(250px, 15vw, 1400px);
 `
 
 /*------------------------------------------------------------UMDP------------------------------------------------------------*/
@@ -219,7 +215,7 @@ export const UmdpImgContainer = styled.div`
   }
 `
 export const UmdpTextContent = styled.div`
-  width: 85%;
+  width: 93%;
   margin: 2.5rem auto;
 `
 
@@ -268,7 +264,7 @@ export const ServicesSection = styled.div`
   background-size: cover;
 `
 export const ServicestHeader = styled.header`
-  width: 85%;
+  width: 92%;
   margin: 1rem auto 0.5rem;
   color: white;
   text-align: center;
@@ -306,13 +302,13 @@ export const ServicesContainer = styled.div`
   justify-content: space-around;
 `
 export const ContentContainer = styled.div`
-  width: 90%;
+  width: 95%;
   margin: 0.5rem auto 2rem;
   display: flex;
   justify-content: center;
   gap: 2vw;
   @media (max-width: 1400px) {
-    width: 85%;
+    width: 93%;
     margin: auto;
     flex-direction: column;
     gap: 5vh;
@@ -515,7 +511,7 @@ export const ContactSection = styled.div`
   }
 `
 export const SectionContainer = styled.div`
-  width: 85%;
+  width: 92%;
   margin: auto;
   @media (min-width: 1440px) {
     width: ${(props) => (props.formSection ? '80%' : '85%')};
