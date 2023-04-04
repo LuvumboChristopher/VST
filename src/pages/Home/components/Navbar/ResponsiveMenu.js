@@ -85,7 +85,7 @@ const ResponsiveMenu = () => {
               </a>
             </li>
             <li>
-              <a href='/store' onClick={() => setShowNavbarMenu(false)}>
+              <a href='/vinylstorelyonshop.vercel.app' onClick={() => setShowNavbarMenu(false)}>
                 Store
               </a>
             </li>

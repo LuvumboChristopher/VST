@@ -87,6 +87,7 @@ export const NavTitle = styled.p`
   display: none;
   font-size: 0.93rem;
   color: rgb(255, 255, 255);
+  text-shadow: 0.05em 0.05em 0 #000, 0.05em 0.05em 0 #000, 0.05em 0.05em 0 #000, 0.05em 0.05em 0 #000;
   ${NavLink}:hover & {
     display: block;
   }
@@ -342,7 +343,7 @@ export const CardImageContainer = styled.div`
     position: relative;
     width: 100%;
     margin: auto;
-    height: 260px;
+    height: 210px;
   }
   @media (max-width: 720px) {
     width: 100%;
@@ -351,14 +352,14 @@ export const CardImageContainer = styled.div`
 `
 export const CardImage = styled.img`
   width: 100%;
-  height: 260px;
+  height: 210px;
   object-fit: cover;
   &:hover {
     cursor: pointer;
   }
   @media (max-width: 1400px) {
     width: 100%;
-    height: 260px;
+    height: 210px;
     flex-direction: ${(props) => (props.reverse ? 'row-reverse' : 'row')};
     object-fit: cover;
   }
@@ -697,6 +698,9 @@ export const LoremText = styled.p`
   font-size: 0.8rem;
   text-align: justify;
   text-transform: lowercase;
+  &:first-letter {
+      text-transform: uppercase;
+    }
 `
 export const NewsletterInput = styled.input`
   width: 100%;
