@@ -77,8 +77,14 @@ section {
   scroll-snap-align: start;
 }
 
+.container{
+  width: 90%;
+  margin: auto;
+  max-width: 1232px;
+}
+
 @media(max-width: 821px) {
     html {
-      scroll-padding-top: 5.5rem;
+      scroll-padding-top: 84.67px;
     }
 }

@@ -13,7 +13,7 @@ import {
 
 const Umdp = () => {
   return (
-    <UmdpSection id='umdp'>
+    <UmdpSection id='umdp' className="container">
       <UmdpImgContainer />
       <UmdpTextContainer>
         <UmdpTextContent>

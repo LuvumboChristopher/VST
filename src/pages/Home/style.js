@@ -20,7 +20,7 @@ export const TopButtonIcon = styled(Icon)`
   z-index: 99;
   position: fixed;
   bottom: 40px;
-  right: 20px;
+  right: 25px;
   background-color: #000000;
   border: 1px solid #fff;
   height: 40px;
@@ -33,6 +33,14 @@ export const TopButtonIcon = styled(Icon)`
     background: rgba(255, 255, 255, 0.89);
     color: #000000;
     border: 1px solid #000000;
+  }
+  @media (max-width: 821px) {
+    height: 50px;
+    width: 50px;
+    right: 0;
+    border-right: none;
+
+
   }
 `
 
@@ -47,7 +55,7 @@ const FadeNavIn = keyframes`
 export const NavContainer = styled.div`
   z-index: 100;
   position: fixed;
-  left: 3px;
+  left: 35px;
   top: 50%;
   transform: translateY(-50%) translateX(-100px);
   background: none;
@@ -56,10 +64,14 @@ export const NavContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   border-radius: 50px;
   opacity: 0;
   animation: ${FadeNavIn} 1s ease 1 1s forwards;
+  transition : all 0.3 ease-in-out;
+  @media (max-width: 1440px) {
+    left: 2.85px;
+  }
   @media (max-width: 821px) {
     display: none;
   }
@@ -107,46 +119,46 @@ export const ResponsiveNavbar = styled.div`
     background: ${(props) =>
       props.navbarTransparency ? 'transparent' : 'white'};
     border-bottom: ${(props) =>
-      props.navbarTransparency ? 'none' : '4px solid black'};
+      props.navbarTransparency ? 'none' : '2px solid black'};
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.5s linear;
+    transition: all 0.3s ease-in-out;
   }
 `
 
 export const ResponsiveNavContainer = styled.div`
-  width: 95%;
+  width: 90%;
   margin: 1.5rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
-
-
 export const HeaderImage = styled.img`
-  width: 140px;
+  width: 120px;
   margin: 0;
-  transition: all 0.1s linear;
+  transition: all 0.3s ease-in-out;
 `
 export const MenuIcon = styled(MenuAlt1)`
-  width: 2.5rem;
+  width: 2rem;
   margin: 0;
   color: ${(props) => (props.navbarTransparency ? 'white' : 'black')};
   cursor: pointer;
 `
 export const ResponsiveNavbarContent = styled.div`
   display: none;
+  opacity: 0;
   @media (max-width: 821px) {
     display: block;
     z-index: 100;
     position: fixed;
     top: 0;
     right: ${(props) => (props.showNavbarMenu ? '0' : '-150%')};
-    width: 63%;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     margin: auto;
     padding: 1.5rem;
+    opacity: 1;
     background-color: rgba(0, 0, 0, 0.96);
     transition: all 0.35s ease-out;
   }
@@ -156,7 +168,7 @@ export const ResponsiveNavbarContent = styled.div`
 
 export const SectionTitle = styled.h1`
   font-family: var(--font-family-title);
-  font-size: clamp(1.5rem, 2.35vw, 55px);
+  font-size: clamp(1.5rem, 2.5vw, 75px);
   width: 100%;
   margin: auto;
   text-transform: none;
@@ -166,28 +178,34 @@ export const SectionTitle = styled.h1`
 export const AccueilSection = styled.div`
   background: url(${AccueilFond});
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: auto;
+  @media (max-width: 425px) {
+    width: 100%;
+    min-height: auto;
+    height: 668px;
+  }
 `
 export const VsLogo = styled.img`
   display: block;
-  width: clamp(250px, 15vw, 1400px);
+  width: clamp(250px, 20vw, 400px);
 `
 
 /*------------------------------------------------------------UMDP------------------------------------------------------------*/
 
 export const UmdpSection = styled.div`
-  width: 100%;
-  height: fit-content;
-  margin: auto;
+  width: 90%;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
+  gap: 3rem;
   @media (min-width: 425px) and (max-width: 1260px) {
+    width: 100%;
     flex-direction: column;
   }
   @media (max-width: 425px) {
@@ -195,34 +213,38 @@ export const UmdpSection = styled.div`
   }
 `
 export const UmdpImgContainer = styled.div`
-    width: 50%;
-    margin: 6rem 0 6rem 4rem;
+    width: 100%;
+    margin: 5rem 0;
     background: url(${Umdp});
     background-size: cover;
     background-position: 45% 45%;
   @media (max-width: 1260px) {
-    width: 85%;
     height: 220px;
-    margin: 4rem auto 0;
+    padding: 0;
+    margin: 3rem auto 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 50%;
   }
   @media (max-width: 768px) {
     width: 100%;
-    height: 170px;
+    height: 270px;
+    padding: 0;
     background-size: 150% auto;
     background-position: 45% 45%;
   }
 `
 export const UmdpTextContent = styled.div`
-  width: 93%;
-  margin: 2.5rem auto;
+  width: 100%;
+  @media (max-width: 1260px){
+    width: 90%;
+    margin: auto;
+  }
 `
 
 export const UmdpTextContainer = styled.div`
   width: 100%;
-  margin: 15vh auto;
+  margin: auto;
   display: grid;
   place-items: center;
   @media (max-width: 1260px){
@@ -234,7 +256,7 @@ export const UmdpTextContainer = styled.div`
 
 export const UmdpTitle = styled.h1`
   font-family: var(--font-family-title);
-  font-size: clamp(1.5rem, 2.35vw, 55px);
+  font-size: clamp(1.75rem, 2.35vw, 55px);
   width: 100%;
   margin: 0 auto;
   text-transform: none;
@@ -244,6 +266,9 @@ export const UmdpParagrph = styled.p`
   width: 100%;
   margin: 20px auto;
   text-align: justify;
+    word-spacing: -1px;
+  letter-spacing: 0.5px; 
+  hyphens: auto;
 `
 export const UmdpSignature = styled.p`
   width: 95%;
@@ -258,21 +283,28 @@ export const UmdpSignature = styled.p`
 export const ServicesSection = styled.div`
   width: 100%;
   margin: auto;
-  padding: 2rem 0;
+  min-height: 100vh;
+  display:grid;
+  place-items: center;
   background: url(${ServicesFond});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 `
+
+export const ServicesSectionContainer = styled.div`
+  width: 90%;
+  margin: auto;
+  height: auto;
+`
+
 export const ServicestHeader = styled.header`
-  width: 92%;
-  margin: 1rem auto 0.5rem;
+  width: 100%;
+  margin: 3rem auto;
   color: white;
   text-align: center;
   @media (max-width: 768px) {
     text-align: left;
-    margin: auto;
-    padding: 0;
   }
 `
 
@@ -297,20 +329,17 @@ export const ServicesSubtitle = styled.p`
 export const ServicesContainer = styled.div`
   width: 100%;
   height: 100%;
-  margin: 0 auto;
-  padding: 2rem 0;
+  margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 `
 export const ContentContainer = styled.div`
-  width: 95%;
-  margin: 0.5rem auto 2rem;
+  width: 100%;
+  margin: 0 auto 4rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2vw;
   @media (max-width: 1400px) {
-    width: 93%;
-    margin: auto;
     flex-direction: column;
     gap: 5vh;
   }
@@ -323,9 +352,18 @@ export const Card = styled.div`
   background-color: rgba(200, 200, 200, 0.055);
   box-shadow: 2px 3px 23px -3px rgba(0, 0, 0, 0.25);
   transition: 0.3s ease;
+
+  &:hover {
+    background-color: rgba(200, 200, 200, 0.1);
+    box-shadow: 2px 3px 23px -3px rgba(0, 0, 0, 0.75);
+    transform: scale(1.005);
+  }
+
+ 
   @media (max-width: 1400px) {
     width: 100%;
-    margin: 0 auto;
+    height: 300px;
+    margin: auto;
     justify-content: center;
     align-items: center;
     flex-direction: ${(props) => (props.reverse ? 'row-reverse' : 'row')};
@@ -343,46 +381,45 @@ export const CardImageContainer = styled.div`
     position: relative;
     width: 100%;
     margin: auto;
-    height: 210px;
+    height: 100%;
+    flex: 0 0 40%;
   }
-  @media (max-width: 720px) {
-    width: 100%;
-    height: 400px;
+  @media (min-width: 768px) and (max-width: 1400px) {
+      flex: 0 0 40%;
   }
 `
 export const CardImage = styled.img`
   width: 100%;
-  height: 210px;
+  height: 220px;
   object-fit: cover;
   &:hover {
     cursor: pointer;
   }
   @media (max-width: 1400px) {
     width: 100%;
-    height: 210px;
+    height:100%;
     flex-direction: ${(props) => (props.reverse ? 'row-reverse' : 'row')};
     object-fit: cover;
   }
   @media (max-width: 720px) {
     width: 100%;
-    height: 400px;
+    height: 200px;
   }
 `
 export const CardTextContainer = styled.div`
-  width: 90%;
-  margin: 2rem auto;
+  width: 100%;
+  margin: auto;
+  padding: 1.5rem;
   color: white;
   display: grid;
   place-items: center;
-  @media (max-width: 1400px) {
-    width: 100%;
-    margin: auto 1.5rem;
+  @media (min-width: 768px) and (max-width: 1400px) {
+    flex: 0 0 60%; 
   }
-  @media (max-width: 720px) {
-    width: 100%;
-    margin: 1rem auto;
-    padding: 0;
-  }
+
+
+
+
 `
 export const CardTitle = styled.p`
   width: 100%;
@@ -395,6 +432,9 @@ export const CardText = styled.p`
   font-size: 0.9rem;
   margin: auto;
   text-align: justify;
+  word-spacing: -1px;
+  letter-spacing: 0.5px; 
+  hyphens: auto;
 `
 
 /*------------------------------------------------------------Banner------------------------------------------------------------*/
@@ -449,8 +489,6 @@ export const Citacion = styled.p`
 
 export const ContactContainer = styled.div`
   width: 100%;
-  display: grid;
-  place-items: center;
   color: white;
   font-family: var(--font-family-text);
   text-transform: uppercase;
@@ -458,6 +496,7 @@ export const ContactContainer = styled.div`
     display: flex;
   }
 `
+
 export const ContactLeft = styled.div`
   width: 100%;
   margin: auto;
@@ -502,6 +541,7 @@ export const ContactSection = styled.div`
   @media (min-width: 821px) {
     margin: auto;
     display: flex;
+    align-items: center;
     gap: 3rem;
     justify-content: space-around;
   }
@@ -512,20 +552,22 @@ export const ContactSection = styled.div`
   }
 `
 export const SectionContainer = styled.div`
-  width: 92%;
+  width: 90%;
   margin: auto;
   @media (min-width: 1440px) {
-    width: ${(props) => (props.formSection ? '80%' : '85%')};
+    width: ${(props) => (props.formSection ? '70%' : '75%')};
+
   }
 `
 export const ContactHeader = styled.header`
+  width:100%
   margin: auto;
 `
 export const ContactTitle = styled.h1`
   font-family: var(--font-family-title);
   font-size: clamp(1.75rem, 2.35vw, 55px);
   width: 100%;
-  margin: auto;
+  margin: 1rem auto;
   text-transform: none;
 `
 export const ContactSubtitle = styled.p`

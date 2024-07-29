@@ -10,7 +10,7 @@ const Banner = () => {
       <BannerOverlay></BannerOverlay>
       <BannerVideo src={SinginVideo} autoPlay loop muted />
       <CitacionContainer>
-        <div>
+        <div className="container">
           <Citacion>{data.banner.citation}</Citacion>
           <Citacion>{data.banner.author}</Citacion>
         </div>
