@@ -5,9 +5,7 @@ import AccueilFond from '../../assets/img/accueil_fond.png'
 import ServicesFond from '../../assets/img/services_fond.jpg'
 import ContactImage1 from '../../assets/img/contact_img_1.jpg'
 import ContactImage2 from '../../assets/img/contact_img_2.jpg'
-import Umdp from '../../assets/img/anders_hejlsberg.png'
-import Faq from '../../assets/img/faq.webp';
-
+import Umdp from '../../assets/img/umdp.jpg'
 
 /*------------------------------------------------------------Top-Button------------------------------------------------------------*/
 
@@ -40,8 +38,6 @@ export const TopButtonIcon = styled(Icon)`
     width: 50px;
     right: 0;
     border-right: none;
-
-
   }
 `
 
@@ -53,23 +49,10 @@ const FadeNavIn = keyframes`
     opacity: 1;
   }
 `
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
-// Contenedor del navegador
 export const NavContainer = styled.div`
   z-index: 100;
   position: fixed;
-  left: 33px;
+  left: 35px;
   top: 50%;
   transform: translateY(-50%) translateX(-100px);
   background: none;
@@ -78,97 +61,46 @@ export const NavContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2px;
+  gap: 14px;
   border-radius: 50px;
   opacity: 0;
   animation: ${FadeNavIn} 1s ease 1 1s forwards;
-  transition: all 0.3s ease-in-out;
-
+  transition : all 0.3 ease-in-out;
   @media (max-width: 1440px) {
     left: 2.85px;
   }
-
   @media (max-width: 821px) {
     display: none;
   }
-
-  &.dark-background {
-    background: black;
-  }
-`;
-
-export const NavIcon = styled.a`
-  width: 7px;
-  height: 7px;
-  background-color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 
-    background-color 0.3s ease-in-out,
-    outline 0.3s ease-in-out,
-    outline-offset 0.3s ease-in-out; 
-
-  &.active {
-    background-color: white;
-    outline: 0.5px solid white;
-    outline-offset: 13px; 
-
-    &:hover {
-      outline: 0.01px solid transparent; 
-      outline-offset: 0; 
-    }
-  }
-
-  &:not(.active) {
-    outline: none;
-    outline-offset: 0;
-  }
-`;
-
+`
 export const NavLink = styled.div`
-  min-width: 150px;
-  height:40px;
+  width: 100%;
+  height: 14px;
   display: flex;
   align-items: center;
-  gap: 27px;
+  gap: 14px;
+`
+export const NavIcon = styled.a`
+  width: 13px;
+  height: 13px;
+  background-color: rgba(0, 0, 0, 0.305);
+  border-radius: 50%;
+  border: 1px solid white;
   cursor: pointer;
-
   &:hover {
-    ${NavIcon} {
-      background-color: white;
-    }
-     ${NavIcon} &.active {
-    background-color: red;
-    outline: 0.5px solid white;
-    outline-offset: 13px; 
-
-    &:hover {
-      outline: 0.01px solid transparent; 
-      outline-offset: 0; 
-    }
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
   }
-
-  }
-`;
-
+`
 export const NavTitle = styled.p`
   display: none;
-  font-size: 0.94rem;
+  font-size: 0.93rem;
   color: rgb(255, 255, 255);
   text-shadow: 0.05em 0.05em 0 #000, 0.05em 0.05em 0 #000, 0.05em 0.05em 0 #000, 0.05em 0.05em 0 #000;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-
   ${NavLink}:hover & {
     display: block;
-    opacity: 1;
-    transform: translateY(0);
-    animation: ${fadeIn} 0.3s ease-in-out forwards;
   }
-`;
-
-
+`
 
 /*------------------------------------------------------------ResponsiveNavbar------------------------------------------------------------*/
 
@@ -237,7 +169,6 @@ export const SectionTitle = styled.h1`
 export const AccueilSection = styled.div`
   background: url(${AccueilFond});
   width: 100%;
-  margin: -1px auto;
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -245,41 +176,26 @@ export const AccueilSection = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   overflow: auto;
-  position: relative;
-
   @media (max-width: 425px) {
     width: 100%;
     min-height: auto;
     height: 668px;
   }
-     &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        z-index: 1; 
 `
 export const VsLogo = styled.img`
   display: block;
-  width: clamp(200px, 25vw, 600px);
-  z-index: 2; 
-
+  width: clamp(250px, 20vw, 400px);
 `
 
 /*------------------------------------------------------------UMDP------------------------------------------------------------*/
 
 export const UmdpSection = styled.div`
-  display: grid;
-  grid-template-columns: 30% 70%;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+  width: 90%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
   @media (min-width: 425px) and (max-width: 1260px) {
-    display:flex;
     width: 100%;
     flex-direction: column;
   }
@@ -287,69 +203,36 @@ export const UmdpSection = styled.div`
     display: block;
   }
 `
-
 export const UmdpImgContainer = styled.div`
     width: 100%;
-    margin: 0;
+    margin: 5rem 0;
     background: url(${Umdp});
     background-size: cover;
     background-position: 45% 45%;
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
-
-    /* Pseudo-elemento para la capa oscura */
-  
-
-    @media (min-width: 1260px) {
-      width: 100%;
-        &::before {
-        content: ''; /* Necesario para que el pseudo-elemento se muestre */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.2); /* Color negro con opacidad de 0.5, ajusta según sea necesario */
-        z-index: 1; /* Asegura que esté sobre la imagen de fondo */
-    }
-    }
-    @media (max-width: 1260px) {
-        height: 220px;
-        padding: 0;
-        margin: 3rem auto 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center 50%;
-    }
-
-    @media (max-width: 768px) {
-        width: 100%;
-        height: 270px;
-        padding: 0;
-        background-size: 150% auto;
-        background-position: 45% 45%;
-    }
-`;
-
-export const UmdpTextContent = styled.div`
+  @media (max-width: 1260px) {
+    height: 220px;
+    padding: 0;
+    margin: 3rem auto 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 50%;
+  }
+  @media (max-width: 768px) {
     width: 100%;
-    margin:auto;
-    @media (max-width: 1260px){
-      width: 90%;
-      margin: auto;
-    }
+    height: 270px;
+    padding: 0;
+    background-size: 150% auto;
+    background-position: 45% 45%;
+  }
 `
-export const UmdpTextContentContainer = styled.div`
-   width: 100%;
-    margin: 0;
-    @media (min-width: 1260px) {
-    padding: 2rem 6rem;
-      width: 90%;
-    }
-    @media (max-width: 1260px){
-      width: 90%;
-      margin: auto;
-    }
-`;
+export const UmdpTextContent = styled.div`
+  width: 100%;
+  @media (max-width: 1260px){
+    width: 90%;
+    margin: auto;
+  }
+`
+
 export const UmdpTextContainer = styled.div`
   width: 100%;
   margin: auto;
@@ -378,7 +261,6 @@ export const UmdpParagrph = styled.p`
   letter-spacing: 0.5px; 
   hyphens: auto;
 `
-
 export const UmdpSignature = styled.p`
   width: 95%;
   margin-top: 2rem;
@@ -392,7 +274,7 @@ export const UmdpSignature = styled.p`
 export const ServicesSection = styled.div`
   width: 100%;
   margin: auto;
-  padding: 5rem 0;
+  min-height: 100vh;
   display:grid;
   place-items: center;
   background: url(${ServicesFond});
@@ -409,9 +291,9 @@ export const ServicesSectionContainer = styled.div`
 
 export const ServicestHeader = styled.header`
   width: 100%;
-  margin: 0 auto 2.5rem;
+  margin: 3rem auto;
   color: white;
-  text-align: left;
+  text-align: center;
   @media (max-width: 768px) {
     text-align: left;
   }
@@ -421,7 +303,7 @@ export const ServicesTitle = styled.h1`
   font-family: var(--font-family-title);
   font-size: clamp(1.75rem, 2.8vw, 64px);
   width: 100%;
-  margin: auto;
+  margin:auto;
   text-transform: none;
   @media (max-width: 768px) {
     margin: auto;
@@ -444,12 +326,13 @@ export const ServicesContainer = styled.div`
 `
 export const ContentContainer = styled.div`
   width: 100%;
+  margin: 0 auto 4rem;
   display: flex;
   justify-content: space-between;
-  gap: 3vw;
+  gap: 2vw;
   @media (max-width: 1400px) {
     flex-direction: column;
-    gap: 4vh;
+    gap: 5vh;
   }
 `
 export const Card = styled.div`
@@ -457,19 +340,17 @@ export const Card = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
-  background-color: rgba(200, 200, 200, 0.045);
-  box-shadow: 2px 3px 23px -3px rgba(0, 0, 0, 0.35);
+  background-color: rgba(200, 200, 200, 0.055);
+  box-shadow: 2px 3px 23px -3px rgba(0, 0, 0, 0.25);
   transition: 0.3s ease;
-  cursor:pointer;
-  text-align: center;
-  color: white;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.09);
+    background-color: rgba(200, 200, 200, 0.1);
     box-shadow: 2px 3px 23px -3px rgba(0, 0, 0, 0.75);
     transform: scale(1.005);
   }
 
+ 
   @media (max-width: 1400px) {
     width: 100%;
     height: 300px;
@@ -500,14 +381,14 @@ export const CardImageContainer = styled.div`
 `
 export const CardImage = styled.img`
   width: 100%;
-  height: 225px;
+  height: 220px;
   object-fit: cover;
   &:hover {
     cursor: pointer;
   }
   @media (max-width: 1400px) {
     width: 100%;
-    height: 100%;
+    height:100%;
     flex-direction: ${(props) => (props.reverse ? 'row-reverse' : 'row')};
     object-fit: cover;
   }
@@ -519,19 +400,32 @@ export const CardImage = styled.img`
 export const CardTextContainer = styled.div`
   width: 100%;
   margin: auto;
-  padding: 1.2rem;
+  padding: 1.5rem;
+  color: white;
   display: grid;
   place-items: center;
   @media (min-width: 768px) and (max-width: 1400px) {
     flex: 0 0 60%; 
   }
+
+
+
+
 `
 export const CardTitle = styled.p`
   width: 100%;
-  font-size: 1.19rem;
+  font-size: 1.20rem;
   font-weight: bold;
   margin: 0 auto 1rem;
   text-align: left;
+`
+export const CardText = styled.p`
+  font-size: 0.9rem;
+  margin: auto;
+  text-align: justify;
+  word-spacing: -1px;
+  letter-spacing: 0.5px; 
+  hyphens: auto;
 `
 
 /*------------------------------------------------------------Banner------------------------------------------------------------*/
@@ -567,18 +461,18 @@ export const CitacionContainer = styled.div`
   place-items: center;
 `
 export const Citacion = styled.p`
-  width: 100%;
+  width: 90%;
   margin: auto;
   display: block;
   color: white;
   padding: 0.73rem;
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 5px;
   @media (min-width: 1440px) {
-    width: 70%;
-    font-size: 0.7rem;
+    width: 50%;
+    font-size: 0.8rem;
   }
 `
 
@@ -664,6 +558,7 @@ export const ContactTitle = styled.h1`
   font-family: var(--font-family-title);
   font-size: clamp(1.75rem, 2.8vw, 64px);
   width: 100%;
+  margin: 1rem auto;
   text-transform: none;
 `
 export const ContactSubtitle = styled.p`
@@ -674,7 +569,7 @@ export const ContactSubtitle = styled.p`
 `
 export const ContactForm = styled.form`
   width: 100%;
-  margin: 1.2rem auto 0;
+  margin: 1.2rem auto;
   text-align: center;
   @media (min-width: 821px) {
     width: 100%;
@@ -692,16 +587,14 @@ export const FooterNav = styled.div`
 `
 export const ContactInput = styled.input`
   width: 100%;
-  padding: 0.5rem; /* Ajusta el padding si es necesario */
+  padding: 0.5rem;
   margin: 0 auto 1rem;
   background: transparent;
   border: none;
-  border-bottom: 1px solid ${(props) => props.borderBottomColor || 'white'};
+  border-radius: 0;
+  border-bottom: 1px solid white;
   color: white;
   resize: none;
-  text-align: left; /* Alinea el texto a la izquierda */
-  font-size: 0.95rem; /* Igualar el tamaño de fuente con el textarea */
-  font-family: var(--font-family-text);
   &:focus {
     outline: none;
   }
@@ -710,28 +603,24 @@ export const ContactInput = styled.input`
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   ::placeholder {
-    font-size: 0.6rem; /* Asegúrate de que el tamaño del placeholder sea consistente */
+    font-size: 0.6rem;
     font-family: var(--font-family-text);
     text-transform: uppercase;
     color: white;
     opacity: 1;
   }
-`;
-
+`
 export const ContactTextarea = styled.textarea`
   width: 100%;
-  padding: 0.5rem; /* Igualar el padding con el input */
+  padding: 0.3rem;
   margin: 0 auto 1rem;
   background: transparent;
   border: none;
-  border-bottom: 1px solid ${(props) => props.borderBottomColor || 'white'};
+  border-bottom: 1px solid white;
   border-radius: 0;
   color: white;
   resize: none;
-  text-align: left; /* Alinea el texto a la izquierda */
-  font-size: 0.95rem; /* Igualar el tamaño de fuente con el textarea */
-  font-family: var(--font-family-text);
-  min-height: 3rem; /* Ajusta la altura mínima si es necesario */
+  text-align: justify;
   &:focus {
     outline: none;
   }
@@ -740,7 +629,7 @@ export const ContactTextarea = styled.textarea`
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   ::placeholder {
-    font-size: 0.6rem; /* Asegúrate de que el tamaño del placeholder sea consistente */
+    font-size: 0.6rem;
     font-family: var(--font-family-text);
     text-transform: uppercase;
     color: white;
@@ -748,15 +637,18 @@ export const ContactTextarea = styled.textarea`
   }
   ::-webkit-scrollbar {
     width: 7px;
+    margin: 0.3rem auto;
+  }
+  ::-webkit-scrollbar {
     background-color: transparent;
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 5px;
   }
-`;
+`
 export const ContactButton = styled.button`
   width: fit-content;
-  margin: 1rem auto 0;
+  margin: 1rem auto;
   padding: 0.5rem 2rem;
   background: transparent;
   border: 1px solid wheat;
@@ -788,7 +680,7 @@ export const FooterInfo = styled.div`
 `
 export const FooterContainer = styled.div`
   width: 100%;
-  margin: 0.5rem auto;
+  margin: 2rem auto;
 `
 export const PlanDuSite = styled.div`
   @media (min-width: 1440px) {
@@ -814,7 +706,7 @@ export const PlanDuSiteContent = styled.li`
 `
 export const Copyright = styled.p`
   width: 100%;
-  margin: 2rem auto 0;
+  margin: 1rem auto 0;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -843,9 +735,9 @@ export const LoremText = styled.p`
   &:first-letter {
     text-transform: uppercase;
   }
-  word-spacing: -1px;
-  letter-spacing: 0.5px; 
-  hyphens: auto;
+  word-spacing: 0.05rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.6;
 `;
 
 export const NewsletterInput = styled.input`
@@ -885,230 +777,3 @@ export const NewsletterButton = styled.button`
     background-color: rgba(255, 255, 255, 0.801);
   }
 `
-
-export const ErrorText = styled.p`
-  width:100%;
-  margin:auto;
-  color: red;
-  text-align:right;
-  font-size: 0.575rem;
-  margin: 0;
-`;
-
-// Modal Overlay
-export const ModalOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(3px);
-  z-index: 1000;
-`;
-
-// Contenedor del Modal
-export const ModalContainer = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  color: black;
-  padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1001;
-`;
-
-export const ModalContent = styled.div`
-  text-align: center;
-`;
-
-export const CloseButton = styled.button`
-  background: transparent;
-  border: none;
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  cursor: pointer;
-  font-size: 1.5rem;
-`;
-
-// Logo del Modal
-export const VsLogoModal = styled.img`
-  width: clamp(100px , 25vw, 190px);
-  margin-bottom: 1rem;
-`;
-
-export const ContactDetails = styled.div`
-  margin-top: 1rem;
-`;
-
-export const ContactLink = styled.a`
-  margin:10px 0;
-  font-size: 0.59rem ;
-  display:inline-block;
-  text-decoration: none;
-  font-size: 1rem !important;
-  text-transform:lowecase !important;
-  padding: 15px;
-  color:white;
-  background-color: black;
-  border: 1px solid white;
-  transistion: all 0.3s ease-in-out;
-  &:hover {
-      color:black;
-      background-color:white;
-      border:1px solid black
-  }
-`;
-
-
-/*------------------------------------------------------------FAQ------------------------------------------------------------*/
-
-
-
-export const FAQSection = styled.section`
-  display: grid;
-  grid-template-columns: 36% 64%;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  border-bottom: 3px solid white;
-`;
-
-export const FaqImgContainer = styled.div`
-    width: 100%;
-    margin: -px 0;
-    background: url(${Faq});
-    background-size: cover;
-    position: relative; 
-  
-        &::before {
-        width: 100%;
-
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.77);
-`;
-
-export const FAQContent = styled.div`
-   width: 100%;
-    margin:auto;
-    @media (max-width: 1260px){
-      width: 90%;
-      margin: auto;
-    }
-`;
-
-export const FAQContentContainer = styled.div`
-   width: 100%;
-    margin:0;
-    @media (min-width: 1260px) {
-      width: 95%;
-      height: 100vh;
-      display:flex;
-      flex-direction: column;
-      justify-content:space-between;
-    }
-    @media (max-width: 1260px){
-      width: 90%;
-      margin: auto;
-    }
-`;
-
-export const FAQHeader = styled.header`
-  width: 90%;
-  margin: 4rem auto 0;
-  text-align: left;
-
-`
-
-export const FaqBody = styled.section`
-  width: 90%;
-  margin: auto;
-  height: 70vh;
-  padding-top:3rem;
-  overflow-y: scroll;
-`
-export const FaqFooter = styled.footer`
-  width: 90%;
-  margin: auto;
-  height: 12vh;
-  border-top:1px solid black;
-`
-
-
-export const FAQTitle = styled.h2`
-  font-family: var(--font-family-title);
-  font-size: clamp(1.75rem, 2.8vw, 64px);
-  width: 100%;
-  margin:auto;
-  text-transform: none;
-  @media (max-width: 768px) {
-    margin: auto;
-  }
-`;
-
-export const FAQSubtitle = styled.h2`
-  width: 100%
-  margin: 0;
-  text-align: left;
-  font-size: 0.45rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-`;
-
-export const FAQItem = styled.div`
-  margin-bottom: 1.5rem;
-`;
-
-export const FAQQuestion = styled.h3`
-  font-size: 1.08rem;
-  font-weight: bold;
-`;
-
-export const FAQAnswer = styled.p`
-  font-size: 0.8rem;
-  margin-top: 0.75rem;
-`;
-
-export const Pagination = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1.75rem;
-`;
-
-export const PaginationButton = styled.button`
-  background-color: #000000;
-  border: 1px solid #fff;
-  height: 40px;
-  width: 40px;
-  padding: 0.45rem;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.4s linear;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  text-align: center;
-  margin: 0 0.2rem;
-
-  &.active {
-    background-color: #ffffff;
-    color: black;
-    border: 1px solid black;
-  }
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.89);
-    color: #000000;
-    border: 1px solid #000000;
-  }
-`;

@@ -9,18 +9,23 @@ import {
   UmdpParagrph,
   UmdpSignature,
   UmdpTitle,
+  UmdpTextContentContainer,
 } from '../../style'
 
 const Umdp = () => {
   return (
-    <UmdpSection id='umdp' className="container">
+    <UmdpSection id='umdp'>
       <UmdpImgContainer />
-      <UmdpTextContainer>
-        <UmdpTextContent>
-          <UmdpTitle>{data.umdp.title}</UmdpTitle>
-          <UmdpParagrph>{data.umdp.text1}</UmdpParagrph>
-          <UmdpParagrph>{data.umdp.text2}</UmdpParagrph>
-          <UmdpSignature>{data.umdp.signature}</UmdpSignature>
+      <UmdpTextContainer >
+        <UmdpTextContent  className="container">
+          <UmdpTextContentContainer>
+            <UmdpTitle>{data.umdp.title}</UmdpTitle>
+            <UmdpParagrph>{data.umdp.text1}</UmdpParagrph>
+            <UmdpParagrph>{data.umdp.text2}</UmdpParagrph>
+            <UmdpParagrph>{data.umdp.text3}</UmdpParagrph>
+            <UmdpParagrph>{data.umdp.text5}</UmdpParagrph>
+            <UmdpSignature>{data.umdp.signature}</UmdpSignature>
+          </UmdpTextContentContainer>
         </UmdpTextContent>
       </UmdpTextContainer>
     </UmdpSection>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import VsLogoBlack from '../../../../assets/img/vs_logo_black.png'
 import { IoCloseSharp } from 'react-icons/io5'
-import { ResponsiveNavbar, HeaderImage, ResponsiveNavbarContent,  MenuIcon, ResponsiveNavContainer } from '../../style'
+import { ResponsiveNavbar, HeaderImage, ResponsiveNavbarContent, ResponsiveNavContainer } from '../../style'
 
 const ResponsiveMenu = () => {
   const ref = useRef()
@@ -105,10 +105,7 @@ const ResponsiveMenu = () => {
           {!navbarTransparency && (
             <ResponsiveNavContainer>
               <HeaderImage src={VsLogoBlack} className="vs_logo_black" />
-              <MenuIcon
-                onClick={HandleMenu}
-                navbarTransparency={navbarTransparency}
-              />
+              {/**Aqui va el burger */}
             </ResponsiveNavContainer>
           )}
         </ResponsiveNavbar>

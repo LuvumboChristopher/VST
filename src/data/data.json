@@ -1,18 +1,143 @@
 {
   "umdp": {
     "title": "#UnMotDuProprio",
-    "text1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molesi velsint commodi repudiandae consequuntur voluptatum laborum numquam bln harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum dentsimiliquaccusantium nemo autem. Veritatis obcaecati tenetur iure eius earu olestias architectvoluptate aliquam nihil, evenietaliquid culpa officia aut!Impedit quaerat, odit,tenetu error, harum nesciunt ipsum debitis quas aliquid. Reprehene.",
-    "text2": "Quo neque error repudiandae fuga ipsa laudantium molestias eos sapiente offi modiat sunt excepturi expedita sint sed quibusdamrecusandae alias error harui xime adipisci amet laborum. Perspiciatis minima nesciunt dolorem! Officiis iurre voluptates a cumque velit quibusdam sed amet tempora. Sit laborum ab, ei-s fu loribus tenetur fugiat, ius sed odit fugiat iusto fuga praesentium optio, eaque rerum dentsimiliquaccusantium nemo autem. Veritatis obcaecati tenetur iure eius earu olestias architectvoluptate  temporibusenim commodi iusto libero magni del-niti quod.",
+    "text1": "Bienvenue chez Vinyl Store ! Je m'appelle Anders Hejlsberg, et j'ai créé cette boutique à Lyon pour partager ma passion pour la musique et les vinyles. Depuis mon enfance, j'ai été bercé par les mélodies des disques que mes parents écoutaient à la maison. Ces moments passés à découvrir des sons nouveaux et à me laisser emporter par des rythmes variés ont façonné ma vie et nourri mon amour pour la musique.",
+    "text2": "Mon amour pour le vinyle est né de cette quête incessante d'authenticité et de chaleur dans le son. Pour moi, écouter un vinyle est une expérience unique, une immersion totale où chaque crépitement ajoute une touche d'authenticité. Le vinyle raconte une histoire, il transporte une âme que le numérique ne peut égaler. C'est cette émotion que j'ai voulu capturer et partager avec vous en ouvrant Vinyl Store.",
+    "text3":"Dans cette boutique, chaque disque est sélectionné avec soin. Que vous soyez à la recherche de classiques intemporels, de perles rares ou de découvertes surprenantes, je m'efforce de proposer une collection qui reflète l'immense diversité et richesse de la musique. Mais Vinyl Store est bien plus qu'un simple magasin; c'est un lieu de rencontre pour les mélomanes, un espace où l'on peut échanger, partager des souvenirs et discuter de nos découvertes musicales.",
+    "text4":"Pour moi, Vinyl Store est un rêve devenu réalité, un lieu où je peux non seulement vivre ma passion, mais aussi la transmettre. Chaque visiteur qui pousse la porte de notre boutique est une nouvelle rencontre, une nouvelle occasion de partager cet amour pour la musique. J'espère que vous trouverez ici un espace de convivialité et de découverte, et que vous partagerez avec nous vos histoires et vos passions.",
+    "text5":"Au plaisir de vous rencontrer en personne et de parler musique !",
     "signature": "Anders Hejlsberg"
   },
-  "services": {
-    "title_1": "Pré-écoutez avant achat",
-    "title_2": "Payez en 4x sans frais",
-    "title_3": "Vinyles et offres exclusives",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitole velsint commdi repandaedfeu consequuntur voluptatum laborum ctetur adipisicing elit. Maxime mollitolesi velsint  adipisicing elit. Maxime mollitole velsint commdi repandaedfeu consequuntur voluptatum laborum ctetur adipisicing elit. Maxime mollitolesi velsint commodi repudiandae consequuntur voluptatum laborum numquam bln harum quisquam eius sed odit fugiat iusto."
-  },
+"services": {
+  "title1": "Pré-écoutez avant achat",
+  "title2": "Payez en 4x sans frais",
+  "title3": "Vinyles et offres exclusives",
+  "text1": "Nous comprenons que chaque vinyle possède une sonorité unique. C'est pourquoi nous vous offrons la possibilité de pré-écouter les disques avant de faire votre choix. Plongez-vous dans l’univers de la musique analogique et assurez-vous que chaque album résonne avec votre sensibilité musicale. Cette expérience est essentielle pour choisir le disque parfait qui vous accompagnera longtemps.",
+  "text2": "Pour améliorer votre expérience d'achat, nous proposons un paiement en quatre fois sans frais. Ainsi, vous pouvez acquérir les vinyles que vous aimez sans impacter votre budget immédiatement. Profitez de cette facilité pour enrichir votre collection musicale et découvrir de nouveaux albums. Cette option vous aide à gérer vos dépenses tout en savourant chaque nouvelle acquisition.",
+  "text3": "Découvrez notre large gamme de vinyles, comprenant des classiques intemporels et des éditions exclusives que vous ne trouverez pas ailleurs. En vous abonnant à notre newsletter, vous serez parmi les premiers à connaître nos nouveautés et à profiter d’offres spéciales. Ne manquez pas l’occasion de dénicher des pièces rares et de bénéficier de tarifs avantageux."
+}
+,
   "banner": {
     "citation": "\"Une chanson est une expérience : il n'y a pas besoin de comprendre les mots pour comprendre l'expérience. Essayer de comprendre le sens complet des mots peut détruire le sentiment de l'expérience dans son ensemble\".",
     "author": "Bob Dylan"
+  },
+"about": {
+  "title": "À propos du Vinyl Store",
+  "text": "Vinyl Store est né d'une passion profonde pour la musique analogique et l'art des vinyles. Situé à Lyon, notre magasin propose une sélection unique de disques, allant des classiques intemporels aux éditions rares et exclusives. Nous croyons au pouvoir de la musique pour connecter les gens et enrichir les vies."
+},
+"newsletter": {
+  "title": "Newsletter",
+  "text": "Inscrivez-vous pour recevoir des exclusivités, des nouvelles de nos événements, et des offres spéciales!"
+},
+"faq": [
+  {
+    "question": "Comment puis-je trouver des vinyles rares dans votre magasin?",
+    "answer": "Pour trouver des vinyles rares, nous vous recommandons de visiter notre section des éditions limitées et des collections spéciales. Vous pouvez également vous inscrire à notre newsletter pour être informé des nouvelles arrivées et des éditions limitées. Nos employés sont également là pour vous aider à trouver ce que vous cherchez."
+  },
+  {
+    "question": "Vos vinyles sont-ils neufs ou d'occasion?",
+    "answer": "Nous proposons une large gamme de vinyles neufs ainsi que des disques d'occasion soigneusement vérifiés pour garantir leur qualité. Chaque vinyle d'occasion est inspecté et nettoyé avant d'être mis en vente."
+  },
+  {
+    "question": "Proposez-vous des services de réparation pour les vinyles endommagés?",
+    "answer": "Actuellement, nous ne proposons pas de services de réparation pour les vinyles endommagés. Cependant, nous pouvons vous recommander des spécialistes locaux pour la réparation de vinyles si vous en avez besoin."
+  },
+  {
+    "question": "Comment puis-je savoir si un vinyle est compatible avec ma platine?",
+    "answer": "Assurez-vous que le vinyle que vous achetez est compatible avec le type de platine que vous possédez. La plupart des vinyles standard fonctionnent avec les platines modernes, mais pour des disques spéciaux ou anciens, vérifiez les spécifications de votre platine ou consultez notre équipe pour obtenir des conseils."
+  },
+  {
+    "question": "Puis-je retourner un vinyle si je ne suis pas satisfait?",
+    "answer": "Oui, nous acceptons les retours dans un délai de 30 jours après l'achat. Les vinyles doivent être retournés dans leur état d'origine pour obtenir un remboursement ou un échange. Veuillez consulter notre politique de retour pour plus de détails."
+  },
+  {
+    "question": "Comment puis-je savoir si un vinyle est authentique?",
+    "answer": "Nous veillons à ce que tous les vinyles que nous proposons soient authentiques. Nous travaillons avec des fournisseurs réputés et vérifions chaque disque pour garantir son authenticité. Si vous avez des doutes, n'hésitez pas à nous demander des informations supplémentaires sur un produit spécifique."
+  },
+  {
+    "question": "Offrez-vous des cartes-cadeaux?",
+    "answer": "Oui, nous proposons des cartes-cadeaux que vous pouvez acheter en magasin ou en ligne. Elles sont disponibles dans diverses valeurs et peuvent être utilisées pour acheter n'importe quel produit de notre boutique."
+  },
+  {
+    "question": "Comment puis-je me tenir au courant des nouvelles sorties et des événements à venir?",
+    "answer": "Inscrivez-vous à notre newsletter pour recevoir des mises à jour sur les nouvelles sorties, les événements à venir et des offres spéciales. Vous pouvez également nous suivre sur les réseaux sociaux pour être informé en temps réel des dernières nouvelles."
+  },
+  {
+    "question": "Est-il possible de commander des vinyles en ligne?",
+    "answer": "Oui, nous offrons la possibilité de commander des vinyles en ligne via notre site web. Vous pouvez parcourir notre catalogue, ajouter des articles à votre panier et choisir une option de livraison qui vous convient."
+  },
+  {
+    "question": "Quels sont les modes de paiement acceptés dans votre magasin?",
+    "answer": "Nous acceptons les paiements par carte de crédit, carte de débit, et espèces. Pour les achats en ligne, nous acceptons également les paiements via PayPal et d'autres options de paiement sécurisées."
+  },
+  {
+    "question": "Quels types de vinyles offrez-vous?",
+    "answer": "Nous offrons une variété de vinyles, y compris des classiques intemporels, des éditions limitées, des albums rares et des nouveautés. Notre sélection couvre divers genres musicaux pour satisfaire tous les goûts."
+  },
+  {
+    "question": "Puis-je demander des vinyles spécifiques que vous n'avez pas en stock?",
+    "answer": "Oui, vous pouvez nous contacter pour demander des vinyles spécifiques. Nous ferons de notre mieux pour les obtenir ou vous informer si nous avons des informations sur leur disponibilité future."
+  },
+  {
+    "question": "Avez-vous des réductions pour les achats en gros?",
+    "answer": "Nous offrons des réductions pour les achats en gros sur demande. Veuillez nous contacter directement pour discuter de vos besoins et obtenir plus d'informations sur nos politiques de réduction."
+  },
+  {
+    "question": "Proposez-vous des services de livraison internationale?",
+    "answer": "Oui, nous proposons des services de livraison internationale. Les frais de livraison et les délais varient en fonction de votre emplacement. Veuillez consulter notre site web pour les détails et les options disponibles."
+  },
+  {
+    "question": "Comment puis-je suivre ma commande en ligne?",
+    "answer": "Après avoir passé votre commande, vous recevrez un email de confirmation contenant un numéro de suivi. Vous pouvez utiliser ce numéro pour suivre l'état de votre commande sur notre site web ou sur le site du transporteur."
+  },
+  {
+    "question": "Quels sont vos horaires d'ouverture et où êtes-vous situés?",
+    "answer": "Nos horaires d'ouverture sont de 10h à 19h du lundi au samedi, et de 11h à 17h le dimanche. Nous sommes situés au 123 Rue de la Musique, Lyon. N'hésitez pas à nous appeler pour toute information supplémentaire."
+  },
+  {
+    "question": "Avez-vous des événements spéciaux ou des concerts en magasin?",
+    "answer": "Oui, nous organisons régulièrement des événements spéciaux, des concerts et des séances de dédicaces. Consultez notre site web ou notre page sur les réseaux sociaux pour connaître les dates et les détails des prochains événements."
+  },
+  {
+    "question": "Comment puis-je devenir membre de votre programme de fidélité?",
+    "answer": "Vous pouvez vous inscrire à notre programme de fidélité en magasin ou en ligne. En tant que membre, vous bénéficierez de réductions exclusives, de points de fidélité et d'accès prioritaire à certaines ventes et événements."
+  },
+  {
+    "question": "Proposez-vous des services d'échange de vinyles?",
+    "answer": "Oui, nous offrons des services d'échange de vinyles sous certaines conditions. Les vinyles doivent être en bon état et répondre à nos critères de qualité. Veuillez consulter notre politique d'échange pour plus de détails."
+  },
+  {
+    "question": "Avez-vous une section dédiée aux artistes locaux?",
+    "answer": "Oui, nous avons une section spéciale dédiée aux artistes locaux où vous pouvez découvrir et acheter des vinyles de talents émergents de la région. Nous soutenons fièrement la scène musicale locale."
+  },
+  {
+    "question": "Quels genres musicaux puis-je trouver dans votre magasin?",
+    "answer": "Notre magasin propose une large variété de genres musicaux, allant du rock, jazz, blues, classique, pop, hip-hop, électronique, reggae, métal, et bien plus encore. Il y en a pour tous les goûts !"
+  },
+  {
+    "question": "Proposez-vous des accessoires pour platines et vinyles?",
+    "answer": "Oui, nous offrons une gamme complète d'accessoires pour platines et vinyles, y compris des aiguilles de rechange, des brosses de nettoyage, des housses de protection, et des préamplis phono. Tout ce dont vous avez besoin pour prendre soin de vos vinyles."
+  },
+  {
+    "question": "Puis-je écouter des vinyles avant de les acheter?",
+    "answer": "Oui, nous avons des cabines d'écoute disponibles en magasin. Vous pouvez y écouter des vinyles avant de prendre votre décision d'achat, pour vous assurer qu'ils répondent à vos attentes."
+  },
+  {
+    "question": "Offrez-vous des cours ou des ateliers sur les vinyles?",
+    "answer": "Oui, nous organisons occasionnellement des cours et des ateliers sur différents sujets liés aux vinyles, comme la maintenance des platines, l'histoire des vinyles, et la technique du DJing. Consultez notre calendrier d'événements pour les prochaines sessions."
+  },
+  {
+    "question": "Puis-je vendre mes vinyles à votre magasin?",
+    "answer": "Oui, nous achetons des collections de vinyles sous certaines conditions. Apportez vos vinyles en magasin pour une évaluation, et nous vous ferons une offre en fonction de leur état et de leur rareté."
+  },
+  {
+    "question": "Faites-vous des livraisons locales à Lyon?",
+    "answer": "Oui, nous offrons des services de livraison locale à Lyon. Les frais de livraison peuvent varier selon votre emplacement et la taille de votre commande. Consultez notre site web pour plus de détails sur nos options de livraison."
+  },
+  {
+    "question": "Puis-je réserver des vinyles en ligne et les retirer en magasin?",
+    "answer": "Oui, vous pouvez réserver des vinyles en ligne et choisir l'option de retrait en magasin. Cela vous permet de vous assurer que les articles souhaités sont disponibles avant de vous déplacer."
   }
+]
+
 }

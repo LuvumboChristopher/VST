@@ -1,0 +1,80 @@
+.faq-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border-bottom: 4px solid white;
+  }
+  
+  .faq-image {
+    background: url('/src/assets//img/faq.jpg') no-repeat center center/cover; /* Imagen de fondo */
+    height: 100%;
+  }
+  
+  .faq-content {
+    color: black; /* Texto blanco para contraste */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    height: 100%;
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es largo */
+  }
+  
+  .faq-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem; /* Ajustar el tamaño de la fuente */
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+  }
+  
+  .faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .faq-answer {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .pagination-button {
+    background-color: #000000; /* Fondo negro */
+    border: 1px solid #fff; /* Borde blanco */
+    height: 40px; /* Altura del botón */
+    width: 40px; /* Ancho del botón */
+    padding: 0.45rem; /* Espaciado interno */
+    color: #fff; /* Texto blanco */
+    cursor: pointer; /* Cursor de puntero */
+    transition: all 0.4s linear; /* Transición suave */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido dentro del botón */
+    font-size: 1rem; /* Tamaño de la fuente */
+    text-align: center; /* Alineación del texto */
+    margin: 0 0.2rem; /* Espaciado entre los botones */
+  }
+  
+  .pagination-button.active {
+    background-color: #ffffff; /* Fondo azul para el botón activo */
+    color: black; /* Texto blanco */
+    border: 1px solid black; /* Borde azul para el botón activo */
+  }
+  
+  .pagination-button:hover {
+    background: rgba(255, 255, 255, 0.89); /* Fondo blanco semitransparente al pasar el ratón */
+    color: #000000; /* Texto negro al pasar el ratón */
+    border: 1px solid #000000; /* Borde negro al pasar el ratón */
+  }
+  

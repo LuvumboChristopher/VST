@@ -1,44 +1,50 @@
-import React from 'react'
-import { NavContainer, NavLink, NavIcon, NavTitle } from '../../style'
+import React, { useState } from 'react';
+import { NavContainer, NavLink, NavIcon, NavTitle } from '../../style';
 
-const Navbar = () => {
+const Navbar = ({ activeSection }) => {
+  const [hovered, setHovered] = useState(null);
+
+  const handleScrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleClick = (section) => {
+    if (section === 'store') {
+      window.open('https://vinylstorelyonshop.vercel.app/', '_blank', 'noopener,noreferrer');
+    } else {
+      handleScrollToSection(section);
+    }
+  };
+
   return (
-      <NavContainer>
-        <NavLink>
+    <NavContainer>
+      {['accueil', 'umdp', 'services', 'faq', 'store', 'contact'].map(section => (
+        <NavLink
+          key={section}
+          onMouseEnter={() => setHovered(section)}
+          onMouseLeave={() => setHovered(null)}
+          onClick={() => handleClick(section)}
+        >
           <NavIcon
-            href='#accueil'
-          ></NavIcon>
-          <NavTitle>Accueil</NavTitle>
+            className={activeSection === section ? 'active' : ''}
+            hovered={hovered === section}
+            active={activeSection === section}
+          />
+          <NavTitle>
+            {section === 'accueil' ? 'Accueil' :
+            section === 'umdp' ? 'Un mot du proprio' :
+            section === 'services' ? 'Services' :
+            section === 'faq' ? 'FAQ' :
+            section === 'store' ? 'Store' :
+            'Contact'}
+          </NavTitle>
         </NavLink>
-        <NavLink>
-          <NavIcon
-            href='#umdp'
-          ></NavIcon>
-          <NavTitle>UMDP</NavTitle>
-        </NavLink>
+      ))}
+    </NavContainer>
+  );
+};
 
-        <NavLink>
-          <NavIcon
-            href='#services'
-          ></NavIcon>
-          <NavTitle>Services</NavTitle>
-        </NavLink>
-
-        <NavLink>
-          <NavIcon
-            href='https://vinylstorelyonshop.vercel.app/'
-          ></NavIcon>
-          <NavTitle>Store</NavTitle>
-        </NavLink>
-
-        <NavLink>
-          <NavIcon
-            href='#contact'
-          ></NavIcon>
-          <NavTitle>Contact</NavTitle>
-        </NavLink>
-      </NavContainer>
-  )
-}
-
-export default Navbar
+export default Navbar;
