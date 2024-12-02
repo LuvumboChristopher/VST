@@ -60,8 +60,8 @@ function Home() {
       <Accueil id="accueil" />
       <Umdp id="umdp" />
       <Services id="services" />
-      <FAQ id="faq" />
       <Banner id="banner" />
+      <FAQ id="faq" />
       <Contact id="contact" />
       <Footer />
     </section>

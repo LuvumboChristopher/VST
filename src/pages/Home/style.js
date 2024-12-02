@@ -624,7 +624,7 @@ export const ContactRight = styled.div`
     width: 35%;
     height: 100vh;
     border: none;
-    border-left: 5px solid white;
+    border-left: 1px solid white;
   }
   @media screen and (min-width: 1440px) and (max-height: 850px) {
     height: 850px;
@@ -984,8 +984,7 @@ export const FaqImgContainer = styled.div`
     margin: 0;
     background: url(${Faq});
     background-size: cover;
-    position: relative; 
-  
+    position: relative;   
         &::before {
         width: 100%;
         content: '';
