@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavContainer, NavLink, NavIcon, NavTitle } from '../../style';
+import { NavContainer, NavLink, NavIcon, NavTitle } from '../../style.js';
 
 const Navbar = ({ activeSection }) => {
   const [hovered, setHovered] = useState(null);

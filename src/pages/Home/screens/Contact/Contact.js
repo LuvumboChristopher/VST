@@ -36,14 +36,13 @@ import {
   ContactLink
 } from '../../style';
 
-import { FaEnvelope } from 'react-icons/fa';
+import { FaBullseye, FaEnvelope } from 'react-icons/fa';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdClose } from 'react-icons/md';
 import { IoGlobeOutline } from 'react-icons/io5';
-import Footer from '../../components/Footer/Footer';
 
 const Contact = () => {
-  const [showBanner, setShowBanner] = useState(true); // Inicialmente false
+  const [showBanner, setShowBanner] = useState(false)
   const [errors, setErrors] = useState({});
   const [formValidity, setFormValidity] = useState({
     nom: 'white',
@@ -61,7 +60,7 @@ const Contact = () => {
   });
   const [submittedData, setSubmittedData] = useState(null);
 
-  const MAX_MESSAGE_LENGTH = 500; // Máximo número de caracteres permitidos en el mensaje
+  const MAX_MESSAGE_LENGTH = 500; 
 
   const validateInput = (id, value) => {
     switch (id) {
@@ -91,7 +90,6 @@ const Contact = () => {
     if (id === 'telefone') {
       formattedValue = value.replace(/\D/g, '').slice(0, 10);
     } else if (id === 'message') {
-      // Limitar la longitud del mensaje
       formattedValue = value.slice(0, MAX_MESSAGE_LENGTH);
     } else {
       formattedValue = capitalizeFirstLetter(value);

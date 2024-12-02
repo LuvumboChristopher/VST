@@ -6,6 +6,8 @@ import ServicesFond from '../../assets/img/services_fond.jpg'
 import ContactImage1 from '../../assets/img/contact_img_1.jpg'
 import ContactImage2 from '../../assets/img/contact_img_2.jpg'
 import Umdp from '../../assets/img/anders_hejlsberg.png'
+import UmdpResponsive from '../../assets/img/anders_hejlsber_responsive.webp'
+
 import Faq from '../../assets/img/faq.webp';
 
 
@@ -20,7 +22,7 @@ export const TopButtonContainer = styled.div`
 export const TopButtonIcon = styled(Icon)`
   z-index: 99;
   position: fixed;
-  bottom: 40px;
+  bottom: 30px;
   right: 25px;
   background-color: #000000;
   border: 1px solid #fff;
@@ -65,7 +67,6 @@ const fadeIn = keyframes`
   }
 `;
 
-// Contenedor del navegador
 export const NavContainer = styled.div`
   z-index: 100;
   position: fixed;
@@ -84,11 +85,7 @@ export const NavContainer = styled.div`
   animation: ${FadeNavIn} 1s ease 1 1s forwards;
   transition: all 0.3s ease-in-out;
 
-  @media (max-width: 1440px) {
-    left: 2.85px;
-  }
-
-  @media (max-width: 821px) {
+  @media (max-width: 1280px) {
     display: none;
   }
 
@@ -194,13 +191,14 @@ export const ResponsiveNavbar = styled.div`
 
 export const ResponsiveNavContainer = styled.div`
   width: 90%;
+  min-height: 80px;
   margin: 1.5rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 export const HeaderImage = styled.img`
-  width: 120px;
+  width: 150px;
   margin: 0;
   transition: all 0.3s ease-in-out;
 `
@@ -215,10 +213,11 @@ export const ResponsiveNavbarContent = styled.div`
     right: ${(props) => (props.showNavbarMenu ? '0' : '-150%')};
     width: 100%;
     min-height: 100vh;
+    display: flex;
     margin: auto;
     padding: 1.5rem;
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.96);
+    background-color: rgba(0, 0, 0, 0.95);
     transition: all 0.35s ease-out;
   }
 `
@@ -259,12 +258,12 @@ export const AccueilSection = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0);
         z-index: 1; 
 `
 export const VsLogo = styled.img`
   display: block;
-  width: clamp(200px, 25vw, 600px);
+  width: clamp(200px, 25vw, 300px);
   z-index: 2; 
 
 `
@@ -281,6 +280,7 @@ export const UmdpSection = styled.div`
   @media (min-width: 425px) and (max-width: 1260px) {
     display:flex;
     width: 100%;
+    height: auto;
     flex-direction: column;
   }
   @media (max-width: 425px) {
@@ -294,31 +294,29 @@ export const UmdpImgContainer = styled.div`
     background: url(${Umdp});
     background-size: cover;
     background-position: 45% 45%;
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
-
-    /* Pseudo-elemento para la capa oscura */
-  
+    position: relative; 
 
     @media (min-width: 1260px) {
       width: 100%;
         &::before {
-        content: ''; /* Necesario para que el pseudo-elemento se muestre */
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.2); /* Color negro con opacidad de 0.5, ajusta según sea necesario */
-        z-index: 1; /* Asegura que esté sobre la imagen de fondo */
+        background: rgba(0, 0, 0, 0.2); 
+        z-index: 1; 
     }
     }
     @media (max-width: 1260px) {
+        display:none;
         height: 220px;
         padding: 0;
         margin: 3rem auto 0;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center 50%;
+        background-position: center 15%;
     }
 
     @media (max-width: 768px) {
@@ -326,7 +324,6 @@ export const UmdpImgContainer = styled.div`
         height: 270px;
         padding: 0;
         background-size: 150% auto;
-        background-position: 45% 45%;
     }
 `;
 
@@ -335,7 +332,7 @@ export const UmdpTextContent = styled.div`
     margin:auto;
     @media (max-width: 1260px){
       width: 90%;
-      margin: auto;
+      margin: 3rem auto 0;
     }
 `
 export const UmdpTextContentContainer = styled.div`
@@ -539,12 +536,12 @@ export const CardTitle = styled.p`
 export const BannerContainer = styled.div`
   width: 100%;
   margin-top: -1px;
-  height: 280px;
+  height: 300px;
   position: relative;
 `
 export const BannerVideo = styled.video`
   width: 100%;
-  height: 280px;
+  height: 300px;
   object-fit: cover;
 `
 export const BannerOverlay = styled.div`
@@ -552,17 +549,15 @@ export const BannerOverlay = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 280px;
-  border-top: 3px solid white;
-  border-bottom: 3px solid white;
-  background-color: rgba(3, 2, 2, 0.81);
+  height: 300px;
+  background-color: rgba(3, 2, 2, 0.65);
 `
 export const CitacionContainer = styled.div`
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  height: 280px;
+  height: 300px;
   display: grid;
   place-items: center;
 `
@@ -573,12 +568,12 @@ export const Citacion = styled.p`
   color: white;
   padding: 0.73rem;
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 5px;
-  @media (min-width: 1440px) {
+  @media (min-width: 1024px) {
     width: 70%;
-    font-size: 0.7rem;
+    font-size: 0.67rem;
   }
 `
 
@@ -597,10 +592,11 @@ export const ContactContainer = styled.div`
 export const ContactLeft = styled.div`
   width: 100%;
   margin: auto;
-  padding: 2rem 0;
+  padding: 3rem 0;
   height: auto;
-  display: grid;
+  display: flex;
   place-items: center;
+  gap: 2rem;
   background: url(${ContactImage1});
   background-position: center;
   background-repeat: no-repeat;
@@ -674,7 +670,7 @@ export const ContactSubtitle = styled.p`
 `
 export const ContactForm = styled.form`
   width: 100%;
-  margin: 1.2rem auto 0;
+  margin: 1.2rem auto 4rem;
   text-align: center;
   @media (min-width: 821px) {
     width: 100%;
@@ -969,38 +965,42 @@ export const ContactLink = styled.a`
 
 
 export const FAQSection = styled.section`
-  display: grid;
-  grid-template-columns: 36% 64%;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
+  display: block;
+  padding: 6rem auto;
+  margin: auto;
   overflow: hidden;
-  border-bottom: 3px solid white;
+   @media (min-width: 1260px){
+      display: grid;
+      grid-template-columns: 40% 60%;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+    }
+
 `;
 
 export const FaqImgContainer = styled.div`
     width: 100%;
-    margin: -px 0;
+    margin: 0;
     background: url(${Faq});
     background-size: cover;
     position: relative; 
   
         &::before {
         width: 100%;
-
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.77);
+        background: rgba(0, 0, 0, 0.6);
 `;
 
 export const FAQContent = styled.div`
    width: 100%;
     margin:auto;
-    @media (max-width: 1260px){
+    @media (min-width: 1260px){
       width: 90%;
       margin: auto;
     }
@@ -1018,29 +1018,41 @@ export const FAQContentContainer = styled.div`
     }
     @media (max-width: 1260px){
       width: 90%;
-      margin: auto;
+      margin: 3rem auto;
     }
 `;
 
 export const FAQHeader = styled.header`
-  width: 90%;
-  margin: 4rem auto 0;
+  width: 100%;
+  margin: 2rem auto 0;
   text-align: left;
+    @media (min-width: 1260px){
+      width: 90%;
+    }
 
 `
 
 export const FaqBody = styled.section`
-  width: 90%;
+  width: 100%;
   margin: auto;
-  height: 70vh;
-  padding-top:3rem;
+  padding-top:2rem;
   overflow-y: scroll;
+    @media (min-width: 1260px){
+      width: 90%;
+      margin: auto;
+      height: 75vh;
+      padding-top:2rem;
+      overflow-y: scroll;
+    }
 `
 export const FaqFooter = styled.footer`
-  width: 90%;
+  width: 100%;
   margin: auto;
   height: 12vh;
   border-top:1px solid black;
+  @media (min-width: 1260px){
+      width: 90%;
+    }
 `
 
 
@@ -1082,6 +1094,9 @@ export const Pagination = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: 1.75rem;
+  @media (max-width: 1024px) {
+  justify-content: center;
+  }
 `;
 
 export const PaginationButton = styled.button`

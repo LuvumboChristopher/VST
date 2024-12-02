@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 import VsLogoBlack from '../../../../assets/img/vs_logo_black.png'
-import { IoCloseSharp } from 'react-icons/io5'
-import { ResponsiveNavbar, HeaderImage, ResponsiveNavbarContent, ResponsiveNavContainer } from '../../style'
+import { IoCloseSharp, IoMenuSharp } from 'react-icons/io5'
+import { ResponsiveNavbar, HeaderImage, ResponsiveNavbarContent, ResponsiveNavContainer } from '../../style.js'
 
 const ResponsiveMenu = () => {
   const ref = useRef()
-  const [showNavbar, setShowNavbar] = useState(false)
-  const [showNavbarMenu, setShowNavbarMenu] = useState(false)
+  const [showNavbar, setShowNavbar] = useState(true)
+  const [showNavbarMenu, setShowNavbarMenu] = useState(false) 
   const [navbarTransparency, setNavbarTransparency] = useState(true)
 
   useEffect(() => {
@@ -42,12 +42,16 @@ const ResponsiveMenu = () => {
         <IoCloseSharp
           style={{
             color: "white",
-            fontSize: "2.3rem",
+            fontSize: "3rem",
             cursor: "pointer",
             margin: "0",
+            position: "absolute",
+            right: "25px",
+            top: "35px",
           }}
           onClick={HandleMenu}
         />
+
         <div
           style={{
             width: "100%",
@@ -100,12 +104,20 @@ const ResponsiveMenu = () => {
           </ul>
         </div>
       </ResponsiveNavbarContent>
+
       {showNavbar && (
         <ResponsiveNavbar navbarTransparency={navbarTransparency}>
           {!navbarTransparency && (
             <ResponsiveNavContainer>
               <HeaderImage src={VsLogoBlack} className="vs_logo_black" />
-              {/**Aqui va el burger */}
+              <div onClick={HandleMenu}>
+                {showNavbarMenu ? (
+                  <IoCloseSharp style={{ color: "black", fontSize: "3rem", cursor: "pointer" }} />
+                ) : (
+                  <IoMenuSharp style={{ color: "black", fontSize: "3rem", cursor: "pointer" }} />
+                )}
+              </div>
+              
             </ResponsiveNavContainer>
           )}
         </ResponsiveNavbar>
@@ -114,4 +126,4 @@ const ResponsiveMenu = () => {
   );
 }
 
-export default ResponsiveMenu
+export default ResponsiveMenu;
