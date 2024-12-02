@@ -63,7 +63,7 @@ const ResponsiveMenu = () => {
             style={{
               margin: "5rem auto",
               color: "white",
-              fontSize: "1rem",
+              fontSize: "1.3rem",
               textTransform: "uppercase",
               letterSpacing: "10px",
               cursor: "pointer",
